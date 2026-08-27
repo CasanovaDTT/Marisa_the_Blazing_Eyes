@@ -1,2 +1,0 @@
-# dtt
-study
