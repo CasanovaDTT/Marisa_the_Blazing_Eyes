@@ -1,0 +1,9 @@
+4 Forest
+4 Mountain
+4 Island
+4 Plains
+4 Swamp
+4 Grizzly Bears
+4 Lightning Bolt
+2 Counterspell
+2 Shivan Dragon   # 演示，但引擎未实现，可先注释

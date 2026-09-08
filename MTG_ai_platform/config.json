@@ -1,0 +1,6 @@
+{
+    "deepseek_api_key": "",
+    "db_path": "cache/db/oracle-cards.sqlite",
+    "image_cache_dir": "cache/images",
+    "log_dir": "logs"
+}
