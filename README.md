@@ -44,48 +44,50 @@
    git clone https://github.com/你的用户名/mtg-ai-platform.git
    cd mtg-ai-platform
 ## 📦 项目结构
-###### MTG_AI_Platform/
-###### │
-###### ├── main.py # 程序入口
-###### ├── config.json # 配置文件（API Key 等）
-###### ├── requirements.txt # 依赖列表
-###### ├── build_exe.bat # PyInstaller 打包脚本
-###### │
-###### ├── core/ # 核心引擎
-###### │ ├── init.py
-###### │ ├── game_engine.py # 游戏主循环、状态管理、回合流程
-###### │ ├── card_object.py # 卡牌对象定义
-###### │ ├── card_library.py # 预置卡牌效果库
-###### │ └── game_state.py # 状态序列化（供 AI 读取）
-###### │
-###### ├── ai/ # AI 模块
-###### │ ├── init.py
-###### │ ├── deepseek_client.py # DeepSeek API 客户端
-###### │ └── agent.py # AI 决策代理（状态→提示词→动作解析）
-###### │
-###### ├── data/ # 数据管理
-###### │ ├── init.py
-###### │ ├── card_db.py # SQLite 卡牌库操作（导入/查询）
-###### │ ├── deck_manager.py # 套牌导入/存储
-###### │ └── image_cache.py # 图片下载与缓存
-###### │
-###### ├── gui/ # 图形界面
-###### │ ├── init.py
-###### │ └── main_window.py # Tkinter 主窗口（含设置、对战、日志）
-###### │
-###### ├── utils/ # 工具
-###### │ ├── init.py
-###### │ ├── logger.py # 战斗日志记录
-###### │ └── deck_parser.py # 套牌解析辅助
-###### │
-###### ├── decks/ # 用户套牌存放目录（自动创建）
-###### │ └── example_deck.txt # 示例套牌
-###### │
-###### ├── logs/ # 对局日志存储（自动生成）
-###### │
-###### └── cache/ # 运行时缓存
-###### ├── db/ # 卡牌 SQLite 数据库
-###### └── images/ # 卡牌图片缓存
+```bash
+MTG_AI_Platform/
+│
+├── main.py                 # 程序入口
+├── config.json             # 配置文件（API Key 等）
+├── requirements.txt        # 依赖列表
+├── build_exe.bat           # PyInstaller 打包脚本
+│
+├── core/                   # 核心引擎
+│   ├── __init__.py
+│   ├── game_engine.py      # 游戏主循环、状态管理、回合流程
+│   ├── card_object.py      # 卡牌对象定义
+│   ├── card_library.py     # 预置卡牌效果库
+│   └── game_state.py       # 状态序列化（供 AI 读取）
+│
+├── ai/                     # AI 模块
+│   ├── __init__.py
+│   ├── deepseek_client.py  # DeepSeek API 客户端
+│   └── agent.py            # AI 决策代理（状态→提示词→动作解析）
+│
+├── data/                   # 数据管理
+│   ├── __init__.py
+│   ├── card_db.py          # SQLite 卡牌库操作（导入/查询）
+│   ├── deck_manager.py     # 套牌导入/存储
+│   └── image_cache.py      # 图片下载与缓存
+│
+├── gui/                    # 图形界面
+│   ├── __init__.py
+│   └── main_window.py      # Tkinter 主窗口（含设置、对战、日志）
+│
+├── utils/                  # 工具
+│   ├── __init__.py
+│   ├── logger.py           # 战斗日志记录
+│   └── deck_parser.py      # 套牌解析辅助
+│
+├── decks/                  # 用户套牌存放目录（自动创建）
+│   └── example_deck.txt    # 示例套牌
+│
+├── logs/                   # 对局日志存储（自动生成）
+│
+└── cache/                  # 运行时缓存
+    ├── db/                 # 卡牌 SQLite 数据库
+    └── images/             # 卡牌图片缓存
+```
 
 ---
 
@@ -105,7 +107,7 @@
 访问 DeepSeek 平台 注册并获取 API Key（免费额度足够测试）。
 
 ### 5. 运行程序
-`python main.py`
+python main.py
 首次运行会自动在根目录生成 config.json 和必要的文件夹（cache/、logs/ 等）。
 
 ### 6. 设置 API Key
@@ -118,7 +120,7 @@
 4 Grizzly Bears
 4 Lightning Bolt
 2 Counterspell`
-支持的卡牌名称见 `core/card_library.py` 中的 `PRESET_CARDS`
+支持的卡牌名称见 core/card_library.py 中的 PRESET_CARDS
 
 ### 8. 开始对战
 #### ·选择对战模式（人机对战 / AI自对弈）。
