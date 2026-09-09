@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DeepSeek API](https://img.shields.io/badge/DeepSeek-API-green)](https://deepseek.com/)
 
-> 基于 **DeepSeek 大语言模型** 的万智牌（Magic: The Gathering）AI 对战平台 —— 核心演示版
+> 基于 **DeepSeek 大语言模型** 的万智牌（Magic: The Gathering）AI 对战平台 —— 核心演示版（施工中）
 
 ---
 
